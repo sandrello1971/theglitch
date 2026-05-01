@@ -1,0 +1,82 @@
+---
+const nav = [
+  { label: "Manifesto", href: "/" },
+  { label: "Segnali", href: "/segnali" },
+  { label: "Glossario", href: "/glossario" },
+  { label: "Colofone", href: "/colofone" },
+];
+const path = Astro.url.pathname;
+---
+<header class="site-header">
+  <div class="container row">
+    <a href="/" class="wordmark" aria-label="Glitch">GLI<span class="t-warp" aria-hidden="true">T</span>CH</a>
+    <nav aria-label="Principale">
+      <ul>
+        {nav.map(({ label, href }) => {
+          const current =
+            href === "/" ? path === "/" : path === href || path.startsWith(href + "/");
+          return (
+            <li>
+              <a href={href} aria-current={current ? "page" : undefined}>
+                {label.toUpperCase()}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--c-rule);
+    background: var(--c-bg);
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-3);
+    padding-block: var(--s-2);
+    flex-wrap: wrap;
+  }
+  .wordmark {
+    font-family: var(--f-mono);
+    font-size: var(--t-sm);
+    font-weight: 500;
+    letter-spacing: var(--tr-wide);
+    text-decoration: none;
+    color: var(--c-fg);
+  }
+  .t-warp {
+    display: inline-block;
+    transform: rotate(-4deg);
+    transform-origin: center;
+  }
+  nav ul {
+    display: flex;
+    gap: var(--s-3);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  nav a {
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    letter-spacing: var(--tr-mono);
+    text-decoration: none;
+    color: var(--c-mute);
+  }
+  nav a:hover,
+  nav a[aria-current="page"] {
+    color: var(--c-fg);
+  }
+  nav a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+  @media (max-width: 540px) {
+    nav ul { gap: var(--s-2); flex-wrap: wrap; }
+  }
+</style>

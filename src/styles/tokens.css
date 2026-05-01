@@ -1,0 +1,44 @@
+:root {
+  /* Colori */
+  --c-bg: #0a0a0a;
+  --c-fg: #e8e6df;
+  --c-mute: #6b6b6b;
+  --c-signal: #ff003c;
+  --c-glitch-cyan: #00ffea;
+  --c-rule: rgba(232, 230, 223, 0.2);
+
+  /* Tipografia */
+  --f-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+  --f-display: "Fraunces", "EB Garamond", Georgia, serif;
+
+  /* Scala tipografica */
+  --t-xs: 0.75rem;
+  --t-sm: 0.875rem;
+  --t-base: 1.125rem;
+  --t-md: 1.5rem;
+  --t-lg: 2rem;
+  --t-xl: 3rem;
+  --t-xxl: 4.5rem;
+  --t-display: 7rem;
+
+  /* Line-height */
+  --lh-tight: 1.05;
+  --lh-snug: 1.25;
+  --lh-prose: 1.55;
+
+  /* Tracking */
+  --tr-wide: 0.18em;
+  --tr-mono: 0.04em;
+
+  /* Spaziature */
+  --s-1: 0.5rem;
+  --s-2: 1rem;
+  --s-3: 2rem;
+  --s-4: 4rem;
+  --s-5: 8rem;
+
+  /* Layout */
+  --measure: 80ch;
+  --max-w: 72rem;
+  --gutter: clamp(1rem, 4vw, 3rem);
+}

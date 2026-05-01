@@ -1,0 +1,53 @@
+---
+---
+<footer class="site-footer">
+  <div class="container row">
+    <p class="cell left">theglitchworld.it · MMXXVI</p>
+    <p class="cell center">
+      iniziativa di <a href="https://stefanoandrello.me" rel="author">stefano andrello</a>
+    </p>
+    <p class="cell right">
+      <a href="/rss.xml">rss</a> · <a href="mailto:rumore@theglitchworld.it">rumore@theglitchworld.it</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: var(--s-5);
+  }
+  .row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--s-3);
+    padding-block: var(--s-4);
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    color: var(--c-mute);
+  }
+  .cell { margin: 0; }
+  .left {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  .center {
+    text-transform: lowercase;
+    text-align: center;
+  }
+  .right {
+    text-transform: lowercase;
+    text-align: right;
+  }
+  .site-footer a {
+    color: var(--c-mute);
+    text-decoration: none;
+  }
+  .center a:hover, .right a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 720px) {
+    .row { grid-template-columns: 1fr; }
+    .left, .center, .right { text-align: left; }
+  }
+</style>
