@@ -1,11 +1,12 @@
 ---
 interface Props {
+  variant?: "stars";
   space?: "default" | "wide" | "tall";
 }
-const { space = "default" } = Astro.props;
+const { variant = "stars", space = "default" } = Astro.props;
 ---
 <div
-  class:list={["rule", space !== "default" && `rule-${space}`]}
+  class:list={["rule", `rule-${variant}`, space !== "default" && `rule-${space}`]}
   role="separator"
   aria-hidden="true"
 >*   *   *</div>
