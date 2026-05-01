@@ -1,14 +1,43 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const all = await getCollection("segnali", ({ data }) => !data.draft);
+const sorted = all.sort(
+  (a, b) => b.data.data.getTime() - a.data.data.getTime(),
+);
+
+const dateFormatter = new Intl.DateTimeFormat("it-IT", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
 ---
 <BaseLayout
   title="Segnali — Glitch"
-  description="In arrivo."
+  description="Il diario operativo di Glitch."
 >
   <article class="segnali container">
     <p class="kicker">Segnali</p>
     <h1 class="title">Segnali.</h1>
-    <p class="status">In arrivo. Il primo segnale uscirà col lancio del sito.</p>
+    <p class="intro">Il diario operativo di Glitch. Brevi annotazioni su ciò che non torna nel racconto dominante dell'AI.</p>
+
+    {sorted.length === 0 ? (
+      <p class="empty">In arrivo. Il primo segnale uscirà col lancio del sito.</p>
+    ) : (
+      <ul class="archive">
+        {sorted.map((entry) => (
+          <li class="entry">
+            <p class="meta">
+              <span class="num">#{String(entry.data.numero).padStart(3, "0")}</span>
+              <span class="dot">·</span>
+              <time datetime={entry.data.data.toISOString()}>{dateFormatter.format(entry.data.data)}</time>
+            </p>
+            <a href={`/segnali/${entry.id}/`} class="entry-title">{entry.data.titolo}</a>
+          </li>
+        ))}
+      </ul>
+    )}
   </article>
 </BaseLayout>
 
@@ -35,13 +64,60 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     color: var(--c-fg);
     font-optical-sizing: auto;
     text-align: left;
-    margin-bottom: var(--s-4);
+    margin-bottom: var(--s-3);
   }
 
-  .status {
+  .intro {
+    font-family: var(--f-mono);
+    font-size: var(--t-base);
+    color: var(--c-mute);
+    margin: 0 0 var(--s-4) 0;
+    max-width: 80ch;
+  }
+
+  .empty {
     font-family: var(--f-mono);
     font-size: var(--t-base);
     color: var(--c-mute);
     margin: 0;
+  }
+
+  .archive {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .entry {
+    margin-block: var(--s-3);
+  }
+  .entry:first-child { margin-top: 0; }
+  .entry:last-child { margin-bottom: 0; }
+
+  .meta {
+    font-family: var(--f-mono);
+    font-size: var(--t-base);
+    margin: 0 0 var(--s-1) 0;
+    color: var(--c-mute);
+  }
+  .num {
+    color: var(--c-signal);
+    text-transform: uppercase;
+  }
+  .dot {
+    margin-inline: 0.4em;
+  }
+
+  .entry-title {
+    font-family: var(--f-display);
+    font-weight: 600;
+    font-size: var(--t-md);
+    color: var(--c-fg);
+    text-decoration: none;
+    font-optical-sizing: auto;
+    line-height: 1.2;
+    display: inline-block;
+  }
+  .entry-title:hover {
+    color: var(--c-signal);
   }
 </style>
