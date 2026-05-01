@@ -19,8 +19,13 @@ import Rule from "../components/Rule.astro";
 
     <section class="block">
       <h2>Chi</h2>
-      <p>Glitch è scritto da Stefano Andrello, AI Strategist e fondatore di Noscite. Ha pubblicato due libri sull'intelligenza artificiale e l'umanesimo digitale: «Il Futuro non è scritto» e «L'Intelligenza Artificiale in Pratica».</p>
-      <p>Il sito personale è <a href="https://stefanoandrello.me" class="signal" target="_blank" rel="noopener">stefanoandrello.me</a>.</p>
+      <p>Glitch è scritto da Stefano Andrello, AI Strategist e fondatore di Noscite. Ha pubblicato tre libri sull'intelligenza artificiale e l'umanesimo digitale:</p>
+      <ul class="book-list">
+        <li>«Restare umani — Guida all'intelligenza artificiale per chi non vuole smettere di pensare»</li>
+        <li>«Il Futuro non è scritto — Memorie di un'Intelligenza Artificiale»</li>
+        <li>«L'Intelligenza Artificiale in Pratica — Guida critica per educatori e professionisti»</li>
+      </ul>
+      <p class="contact">Il sito personale è <a href="https://stefanoandrello.me" class="signal" target="_blank" rel="noopener">stefanoandrello.me</a>.</p>
     </section>
 
     <Rule variant="stars" />
@@ -107,5 +112,23 @@ import Rule from "../components/Rule.astro";
   .colofone a.signal,
   .colofone .rumore-list a {
     color: var(--c-signal);
+  }
+
+  /* Book list (sezione Chi) */
+  .book-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--s-3) 0;
+  }
+  .book-list li {
+    font-family: var(--f-display);
+    font-style: italic;
+    font-size: var(--t-base);
+    color: var(--c-fg);
+    margin-block: 0.4rem;
+    font-optical-sizing: auto;
+  }
+  .block .contact {
+    margin-top: var(--s-3);
   }
 </style>
