@@ -1,32 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Rule from "../components/Rule.astro";
 ---
 <BaseLayout
-  title="Contatti — Glitch"
-  description="Come contattare Stefano Andrello. Salva il contatto sul telefono in un tocco."
+  title="Glitch"
+  description="Stefano Andrello. Salva il contatto sul telefono in un tocco."
 >
-  <article class="contatti container">
-    <p class="kicker">Contatti</p>
-    <h1 class="title">Contatti.</h1>
+  <article class="glitch-card container">
+    <p class="kicker">Glitch</p>
+    <h1 class="title">Glitch.</h1>
 
     <section class="card">
+      <img src="/glitch-logo.png" alt="" class="logo" />
       <p class="name">Stefano Andrello</p>
-      <a
-        href="/stefano-andrello.vcf"
-        download="stefano-andrello.vcf"
-        class="vcf-cta"
-        aria-label="Salva il contatto di Stefano Andrello nella rubrica del telefono"
-      >
-        Salva contatto
-      </a>
-      <p class="hint">Tocca da mobile per aggiungerlo direttamente alla rubrica.</p>
-    </section>
 
-    <Rule variant="stars" />
-
-    <section class="block">
-      <h2>Diretti</h2>
       <ul class="list">
         <li>
           <span class="lbl">Tel</span>
@@ -41,12 +27,22 @@ import Rule from "../components/Rule.astro";
           <a href="https://stefanoandrello.me" target="_blank" rel="noopener">stefanoandrello.me</a>
         </li>
       </ul>
+
+      <a
+        href="/stefano-andrello.vcf"
+        download="stefano-andrello.vcf"
+        class="vcf-cta"
+        aria-label="Salva il contatto di Stefano Andrello nella rubrica del telefono"
+      >
+        Salva contatto
+      </a>
+      <p class="hint">Tocca da mobile per aggiungerlo direttamente alla rubrica.</p>
     </section>
   </article>
 </BaseLayout>
 
 <style>
-  .contatti {
+  .glitch-card {
     --measure: 70ch;
     padding-block: var(--s-3) var(--s-3);
   }
@@ -76,8 +72,16 @@ import Rule from "../components/Rule.astro";
     max-width: var(--measure);
     border: 1px solid var(--c-rule);
     padding: var(--s-3);
-    margin-bottom: var(--s-4);
   }
+
+  .logo {
+    display: block;
+    width: auto;
+    max-width: 140px;
+    height: auto;
+    margin: 0 0 var(--s-3) 0;
+  }
+
   .name {
     font-family: var(--f-display);
     font-weight: 600;
@@ -85,6 +89,35 @@ import Rule from "../components/Rule.astro";
     color: var(--c-fg);
     margin: 0 0 var(--s-3) 0;
     font-optical-sizing: auto;
+  }
+
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--s-4) 0;
+  }
+  .list li {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    gap: var(--s-2);
+    align-items: baseline;
+    margin-block: 0.6rem;
+    font-family: var(--f-mono);
+    font-size: var(--t-base);
+  }
+  .lbl {
+    color: var(--c-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: var(--t-xs);
+  }
+  .list a {
+    color: var(--c-fg);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .list a:hover {
+    color: var(--c-signal);
   }
 
   .vcf-cta {
@@ -113,48 +146,6 @@ import Rule from "../components/Rule.astro";
     font-size: var(--t-xs);
     color: var(--c-mute);
     margin: var(--s-2) 0 0 0;
-  }
-
-  .block {
-    max-width: var(--measure);
-  }
-  .block h2 {
-    font-family: var(--f-mono);
-    font-size: var(--t-sm);
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--c-signal);
-    margin-bottom: var(--s-2);
-  }
-
-  .list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .list li {
-    display: grid;
-    grid-template-columns: 4rem 1fr;
-    gap: var(--s-2);
-    align-items: baseline;
-    margin-block: 0.6rem;
-    font-family: var(--f-mono);
-    font-size: var(--t-base);
-  }
-  .lbl {
-    color: var(--c-mute);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: var(--t-xs);
-  }
-  .list a {
-    color: var(--c-fg);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-  .list a:hover {
-    color: var(--c-signal);
   }
 
   @media (max-width: 540px) {
