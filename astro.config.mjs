@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://theglitchworld.it",
+  site: "https://effettoglitch.it",
   markdown: {
     smartypants: false,
   },

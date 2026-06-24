@@ -11,7 +11,7 @@ const {
   image = "/og/default.png",
 } = Astro.props;
 
-const siteOrigin = Astro.site ?? new URL("https://theglitchworld.it");
+const siteOrigin = Astro.site ?? new URL("https://effettoglitch.it");
 const canonical = new URL(Astro.url.pathname, siteOrigin);
 const ogImage = new URL(image, siteOrigin);
 
