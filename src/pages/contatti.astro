@@ -1,0 +1,166 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Rule from "../components/Rule.astro";
+---
+<BaseLayout
+  title="Contatti — Glitch"
+  description="Come contattare Stefano Andrello. Salva il contatto sul telefono in un tocco."
+>
+  <article class="contatti container">
+    <p class="kicker">Contatti</p>
+    <h1 class="title">Contatti.</h1>
+
+    <section class="card">
+      <p class="name">Stefano Andrello</p>
+      <a
+        href="/stefano-andrello.vcf"
+        download="stefano-andrello.vcf"
+        class="vcf-cta"
+        aria-label="Salva il contatto di Stefano Andrello nella rubrica del telefono"
+      >
+        Salva contatto
+      </a>
+      <p class="hint">Tocca da mobile per aggiungerlo direttamente alla rubrica.</p>
+    </section>
+
+    <Rule variant="stars" />
+
+    <section class="block">
+      <h2>Diretti</h2>
+      <ul class="list">
+        <li>
+          <span class="lbl">Tel</span>
+          <a href="tel:+393476859801">+39 347 685 9801</a>
+        </li>
+        <li>
+          <span class="lbl">Mail</span>
+          <a href="mailto:ste@stefanoandrello.me">ste@stefanoandrello.me</a>
+        </li>
+        <li>
+          <span class="lbl">Web</span>
+          <a href="https://stefanoandrello.me" target="_blank" rel="noopener">stefanoandrello.me</a>
+        </li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .contatti {
+    --measure: 70ch;
+    padding-block: var(--s-3) var(--s-3);
+  }
+
+  .kicker {
+    font-family: var(--f-mono);
+    font-size: var(--t-sm);
+    letter-spacing: 0.15em;
+    color: var(--c-mute);
+    text-transform: uppercase;
+    margin-bottom: var(--s-3);
+  }
+
+  .title {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: var(--t-xxl);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--c-fg);
+    font-optical-sizing: auto;
+    text-align: left;
+    margin-bottom: var(--s-4);
+  }
+
+  .card {
+    max-width: var(--measure);
+    border: 1px solid var(--c-rule);
+    padding: var(--s-3);
+    margin-bottom: var(--s-4);
+  }
+  .name {
+    font-family: var(--f-display);
+    font-weight: 600;
+    font-size: var(--t-lg);
+    color: var(--c-fg);
+    margin: 0 0 var(--s-3) 0;
+    font-optical-sizing: auto;
+  }
+
+  .vcf-cta {
+    display: inline-block;
+    font-family: var(--f-mono);
+    font-size: var(--t-sm);
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--c-bg);
+    background: var(--c-signal);
+    padding: var(--s-2) var(--s-3);
+    border: 1px solid var(--c-signal);
+    transition: background 120ms ease, color 120ms ease;
+  }
+  .vcf-cta:hover,
+  .vcf-cta:focus-visible {
+    background: transparent;
+    color: var(--c-signal);
+    outline: none;
+  }
+
+  .hint {
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    color: var(--c-mute);
+    margin: var(--s-2) 0 0 0;
+  }
+
+  .block {
+    max-width: var(--measure);
+  }
+  .block h2 {
+    font-family: var(--f-mono);
+    font-size: var(--t-sm);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--c-signal);
+    margin-bottom: var(--s-2);
+  }
+
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .list li {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    gap: var(--s-2);
+    align-items: baseline;
+    margin-block: 0.6rem;
+    font-family: var(--f-mono);
+    font-size: var(--t-base);
+  }
+  .lbl {
+    color: var(--c-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: var(--t-xs);
+  }
+  .list a {
+    color: var(--c-fg);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .list a:hover {
+    color: var(--c-signal);
+  }
+
+  @media (max-width: 540px) {
+    .list li {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+</style>
