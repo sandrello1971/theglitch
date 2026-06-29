@@ -33,9 +33,6 @@ const siteOrigin = Astro.site ?? new URL("https://www.effettoglitch.it");
 const canonical = new URL(Astro.url.pathname, siteOrigin);
 const ogImage = new URL(image, siteOrigin);
 
-const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
-const bingSiteVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION;
-
 const siteJsonLd = [
   {
     "@context": "https://schema.org",
@@ -86,12 +83,7 @@ import SiteFooter from "../components/SiteFooter.astro";
     <meta name="author" content={author} />
     <meta name="theme-color" content="#0a0a0a" />
     <meta name="color-scheme" content="dark" />
-    {googleSiteVerification && (
-      <meta name="google-site-verification" content={googleSiteVerification} />
-    )}
-    {bingSiteVerification && (
-      <meta name="msvalidate.01" content={bingSiteVerification} />
-    )}
+    <meta name="google-site-verification" content="5fMj9DFpo5MtPNe30r493OykSZ5kl9s_X4CN___F7EQ" />
     <link rel="canonical" href={canonical.href} />
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -100,7 +92,6 @@ import SiteFooter from "../components/SiteFooter.astro";
     <link rel="shortcut icon" href="/favicon.ico" />
 
     <link rel="alternate" type="application/rss+xml" title="Effetto Glitch — Segnali" href="/rss.xml" />
-    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
 
     <meta property="og:type" content={pageType} />
     <meta property="og:locale" content="it_IT" />
