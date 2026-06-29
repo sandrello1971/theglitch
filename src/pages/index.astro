@@ -7,6 +7,13 @@ import { Content, frontmatter } from "../content/manifesto.md";
   description={frontmatter.summary}
 >
   <article class="manifesto container">
+    <img
+      src="/glitch-logo.png"
+      alt="Effetto Glitch"
+      class="logo"
+      width="160"
+      height="131"
+    />
     <p class="kicker">Manifesto — Aprile 2026</p>
     <h1 class="title" data-text="Il glitch è umano.">Il glitch è umano.</h1>
     <div class="prose">
@@ -30,6 +37,14 @@ import { Content, frontmatter } from "../content/manifesto.md";
 <style>
   .manifesto {
     padding-block: var(--s-3) var(--s-3);
+  }
+
+  .logo {
+    display: block;
+    width: auto;
+    max-width: 160px;
+    height: auto;
+    margin: 0 0 var(--s-3) 0;
   }
 
   .kicker {

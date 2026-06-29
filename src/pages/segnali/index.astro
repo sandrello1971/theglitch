@@ -12,10 +12,34 @@ const dateFormatter = new Intl.DateTimeFormat("it-IT", {
   month: "long",
   year: "numeric",
 });
+
+const siteOrigin = Astro.site ?? new URL("https://effettoglitch.it");
+const collectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": new URL("/segnali/#collection", siteOrigin).href,
+  name: "Segnali",
+  description:
+    "Diario operativo di Effetto Glitch. Annotazioni critiche su come l'intelligenza artificiale entra (o non entra) nelle piccole e medie imprese italiane.",
+  url: new URL("/segnali/", siteOrigin).href,
+  inLanguage: "it-IT",
+  isPartOf: { "@id": new URL("/#website", siteOrigin).href },
+  mainEntity: {
+    "@type": "ItemList",
+    numberOfItems: sorted.length,
+    itemListElement: sorted.map((entry, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      url: new URL(`/segnali/${entry.id}/`, siteOrigin).href,
+      name: entry.data.titolo,
+    })),
+  },
+};
 ---
 <BaseLayout
-  title="Segnali — Glitch"
-  description="Il diario operativo di Glitch."
+  title="Segnali — Effetto Glitch"
+  description="Diario operativo di Effetto Glitch. Annotazioni critiche su come l'AI entra (o non entra) nelle PMI italiane: scene reali, posizioni precise, niente miracoli venduti."
+  jsonLd={collectionJsonLd}
 >
   <article class="segnali container">
     <p class="kicker">Segnali</p>

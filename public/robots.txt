@@ -1,0 +1,83 @@
+# Effetto Glitch — robots.txt
+# https://effettoglitch.it
+
+# Default: tutti i crawler possono indicizzare tutto tranne /glitch (vCard privata)
+User-agent: *
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+# Crawler di ricerca classici — esplicitamente permessi
+User-agent: Googlebot
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+User-agent: Bingbot
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+# Crawler di motori AI — esplicitamente permessi per citazione nelle risposte
+# (Google AI Overviews / Gemini)
+User-agent: Google-Extended
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+# (OpenAI / ChatGPT)
+User-agent: GPTBot
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+# (Anthropic / Claude)
+User-agent: ClaudeBot
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+# (Perplexity)
+User-agent: PerplexityBot
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+# (Cohere)
+User-agent: cohere-ai
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+# (Apple Intelligence)
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /glitch
+Disallow: /stefano-andrello.vcf
+
+Sitemap: https://effettoglitch.it/sitemap-index.xml
