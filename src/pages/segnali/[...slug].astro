@@ -37,7 +37,7 @@ if (!tempoLettura) {
 
 const eyebrow = `Segnale #${numero} · ${dataFmt} · ${tempoLettura}`;
 
-const siteOrigin = Astro.site ?? new URL("https://effettoglitch.it");
+const siteOrigin = Astro.site ?? new URL("https://www.effettoglitch.it");
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
 const isoDate = entry.data.data.toISOString();
 

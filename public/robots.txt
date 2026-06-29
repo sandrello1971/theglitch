@@ -1,5 +1,5 @@
 # Effetto Glitch — robots.txt
-# https://effettoglitch.it
+# https://www.effettoglitch.it
 
 # Default: tutti i crawler possono indicizzare tutto tranne /glitch (vCard privata)
 User-agent: *
@@ -80,4 +80,4 @@ Allow: /
 Disallow: /glitch
 Disallow: /stefano-andrello.vcf
 
-Sitemap: https://effettoglitch.it/sitemap-index.xml
+Sitemap: https://www.effettoglitch.it/sitemap-index.xml

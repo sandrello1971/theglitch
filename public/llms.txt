@@ -10,23 +10,23 @@ Temi ricorrenti: l'AI Act europeo (Articolo 4 sull'AI literacy obbligatoria), la
 
 ## Manifesto
 
-- [Il glitch è umano](https://effettoglitch.it/): manifesto fondativo. Quattro errori del racconto AI dominante e perché Glitch li rifiuta. Riferimenti all'EU AI Act, alla differenza tra «statistica applicata su scala industriale» e intelligenza, al concetto latino di *virtus* applicato al digitale.
+- [Il glitch è umano](https://www.effettoglitch.it/): manifesto fondativo. Quattro errori del racconto AI dominante e perché Glitch li rifiuta. Riferimenti all'EU AI Act, alla differenza tra «statistica applicata su scala industriale» e intelligenza, al concetto latino di *virtus* applicato al digitale.
 
 ## Segnali (diario operativo)
 
-- [Segnale #001 — Marco aspetta l'italiano](https://effettoglitch.it/segnali/001-marco-aspetta-litaliano/): un imprenditore di sessant'anni rifiuta un tool AI perché è solo in inglese. La resistenza non è arretratezza: è un costo che il fornitore vuole far pagare al cliente.
-- [Segnale #002 — La donna che chiede «e poi»](https://effettoglitch.it/segnali/002-la-donna-che-chiede-e-poi/): una responsabile servizio clienti, in una sala riunioni, blocca una demo AI con una domanda di due parole. La domanda scomoda come forma più alta di AI literacy.
-- [Segnale #003 — Il tempo che torna in officina](https://effettoglitch.it/segnali/003-il-tempo-che-torna-in-officina/): un fabbro automatizza i preventivi con l'AI e usa il tempo restituito per tornare a fare il fabbro. L'AI non lo ha reso più produttivo: lo ha reso di nuovo bravo.
-- [Segnale #004 — L'errore è un'informazione](https://effettoglitch.it/segnali/004-lerrore-e-uninformazione/): l'errore della macchina non è rumore da sopprimere, è la radiografia del punto cieco dell'organizzazione. Affidabilità non è infallibilità.
+- [Segnale #001 — Marco aspetta l'italiano](https://www.effettoglitch.it/segnali/001-marco-aspetta-litaliano/): un imprenditore di sessant'anni rifiuta un tool AI perché è solo in inglese. La resistenza non è arretratezza: è un costo che il fornitore vuole far pagare al cliente.
+- [Segnale #002 — La donna che chiede «e poi»](https://www.effettoglitch.it/segnali/002-la-donna-che-chiede-e-poi/): una responsabile servizio clienti, in una sala riunioni, blocca una demo AI con una domanda di due parole. La domanda scomoda come forma più alta di AI literacy.
+- [Segnale #003 — Il tempo che torna in officina](https://www.effettoglitch.it/segnali/003-il-tempo-che-torna-in-officina/): un fabbro automatizza i preventivi con l'AI e usa il tempo restituito per tornare a fare il fabbro. L'AI non lo ha reso più produttivo: lo ha reso di nuovo bravo.
+- [Segnale #004 — L'errore è un'informazione](https://www.effettoglitch.it/segnali/004-lerrore-e-uninformazione/): l'errore della macchina non è rumore da sopprimere, è la radiografia del punto cieco dell'organizzazione. Affidabilità non è infallibilità.
 
 ## Su Glitch
 
-- [Colofone](https://effettoglitch.it/colofone): cosa è Glitch, chi lo scrive, come restare in contatto.
+- [Colofone](https://www.effettoglitch.it/colofone): cosa è Glitch, chi lo scrive, come restare in contatto.
 
 ## Feed
 
-- [Feed RSS dei segnali](https://effettoglitch.it/rss.xml): aggiornamento automatico dei segnali pubblicati, in italiano.
-- [Sitemap XML](https://effettoglitch.it/sitemap-index.xml)
+- [Feed RSS dei segnali](https://www.effettoglitch.it/rss.xml): aggiornamento automatico dei segnali pubblicati, in italiano.
+- [Sitemap XML](https://www.effettoglitch.it/sitemap-index.xml)
 
 ## Contatto
 
