@@ -38,7 +38,9 @@ Per fare questo bene, ci sono quattro cose che la narrazione corrente sbaglia, e
 
 ---
 
-C'è una parola latina che continuo a portarmi dietro: virtus. Non significa virtù in senso morale, significa potenza, capacità, forza propria. In digitali nova virtus — nel digitale c'è una nuova forza. Ma quella forza non è dell'AI. È nostra, quando impariamo a usarla bene. È nostra, quando decidiamo dove applicarla e dove no. È nostra, quando manteniamo il diritto di dire: questo lo decido io, non l'algoritmo.
+Si parla sempre della potenza dell'AI. Ma la potenza vera, nel digitale, non è la sua: è la nostra. È nostra quando impariamo a usarla bene. È nostra quando decidiamo dove applicarla e dove no. È nostra quando manteniamo il diritto di dire: questo lo decido io, non l'algoritmo.
+
+La forza non è nello strumento. È in chi sa quando usarlo e quando fermarlo.
 
 ---
 
